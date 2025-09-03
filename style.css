@@ -36,7 +36,7 @@ body {
     height: 180px;
     border: 3px solid var(--color-texto-blanco);
     border-radius: 50%;
-    margin: 100px auto 20px auto; 
+    margin: 190px auto 20px auto; 
     overflow: hidden;
     background-color: #000;
 }
@@ -154,19 +154,59 @@ body {
     height: 45px;
 }
 
+/* ================================================= */
+/* === ESTILOS UNIFICADOS DE BOTONES === */
+/* ================================================= */
+
+/* --- Estilo del botón de Servicios --- */
 .btn-custom {
     border: 2px solid var(--color-oro);
     color: var(--color-oro);
+    background-color: transparent;
     padding: 10px 25px;
     font-size: 1.1rem;
+    font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-top: 15px;
+    
+    /* === REGLAS AÑADIDAS PARA UNIFICAR TAMAÑO === */
+    display: block;      /* Se comporta como un bloque */
+    width: 100%;         /* Ocupa el 100% del espacio disponible */
+    max-width: 305px;    /* Ancho máximo para consistencia */
+    margin-left: auto;   /* Centrado horizontal */
+    margin-right: auto;  /* Centrado horizontal */
 }
 
 .btn-custom:hover {
     background-color: var(--color-oro);
     color: var(--color-fondo-oscuro);
+}
+
+/* --- Estilo del botón de Oferta (mismas reglas de tamaño) --- */
+.btn-oferta {
+    background-color: var(--color-oro);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    transition: filter 0.3s ease;
+    margin-top: 15px;
+    
+    /* === REGLAS DE TAMAÑO CONSISTENTES === */
+    display: block;
+    width: 100%;
+    max-width: 305px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-oferta:hover {
+    color: #000;
+    filter: brightness(0.9);
 }
 
 /* ===========================
@@ -176,4 +216,59 @@ body {
     #hero { padding: 30px 15px 20px 15px; } /* Ajuste fino para móviles */
     .hero-title { font-size: 2rem; }
     .logo { width: 150px; height: 150px; }
+}
+
+/* ================================================= 
+    ESTILOS PARA MODAL DE OFERTA
+    ================================================= */
+
+/* --- Estilos para el Modal --- */
+
+/* Contenedor principal del modal (fondo oscuro, sin bordes) */
+#ofertaModal .modal-content {
+    background-color: var(--color-fondo-oscuro);
+    border: none;
+    border-radius: 0;
+}
+
+/* Cabecera dorada */
+#ofertaModal .modal-header {
+    background-color: var(--color-oro);
+    color: #000;
+    justify-content: center; /* Centra el título */
+    padding: 1rem;
+    border-bottom: none; /* Quitamos la línea de separación */
+}
+
+#ofertaModal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Cuerpo negro con la información */
+#ofertaModal .modal-body {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Estilos para cada línea de texto dentro del modal */
+.modal-dias, .modal-servicio {
+    color: var(--color-texto-blanco);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.modal-horario {
+    color: var(--color-texto-blanco);
+    font-size: 1.20rem;
+    margin-bottom: 0.25rem; /* Espacio antes de "CORTES A:" */
+}
+
+.modal-precio {
+    color: var(--color-oro);
+    font-size: 3rem;
+    font-weight: 900; /* Letra extra gruesa */
+    line-height: 1.2;
 }

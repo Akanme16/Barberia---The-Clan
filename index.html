@@ -71,13 +71,42 @@
                 <a href="#services" class="btn btn-custom">
                     Nuestros Servicios
                 </a>
+
+                <button type="button" class="btn btn-oferta" data-bs-toggle="modal" data-bs-target="#ofertaModal">
+                    OFERTA ESPECIAL
+                </button>
             </div>
         </section>
 
         <!-- SEGUNDA FRANJA DORADA -->
         <div class="golden-stripe"></div>
+
+        <!-- ============================================= -->
+        <!-- === NUEVO MODAL DE LA OFERTA ESPECIAL === -->
+        <!-- ============================================= -->
+        <div class="modal fade" id="ofertaModal" tabindex="-1" aria-labelledby="ofertaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Cabecera Dorada -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ofertaModalLabel">OFERTA ESPECIAL</h5>
+                    </div>
+
+                    <!-- Cuerpo Negro con la Información -->
+                    <div class="modal-body">
+                        <p class="modal-dias">LUNES A MIÉRCOLES</p>
+                        <p class="modal-horario">Entre 11:30 AM a 15:00 PM</p>
+                        <p class="modal-servicio">CORTES A:</p>
+                        <p class="modal-precio">50.000 ₲</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
     
     <!-- <script src="script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
