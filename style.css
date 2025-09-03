@@ -1,6 +1,7 @@
-/* ========================
-    VARIABLES Y ESTILOS BASE
-   ======================== */
+/* ======================================= */
+/* VARIABLES GLOBALES Y ESTILOS BASE
+/* Define la paleta de colores y la tipografía para todo el sitio.
+/* ======================================= */
 :root {
     --color-oro: #b89f7e;
     --color-fondo-oscuro: #121212;
@@ -14,17 +15,14 @@ body {
     font-family: var(--font-principal);
 }
 
-/* ===========================
-    SECCIÓN 1: HERO
-   =========================== */
+/* ======================================= */
+/* 1. HERO: Sección de bienvenida principal.
+/* Contiene el fondo, el logo y los títulos.
+/* ======================================= */
 #hero {
-    /* === AJUSTE DE ESPACIADO === */
-    /* Reducimos la altura mínima y el padding inferior para compactar todo */
-    min-height: auto; 
-    padding: 40px 15px 25px 15px; /* Menos padding abajo */
     position: relative;
-    
-    /* CAMBIAR: Coloca la ruta de tu imagen de fondo */
+    min-height: auto; 
+    padding: 40px 15px 25px 15px;
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/background/img-cover-01.png');
     background-color: #000;
     background-size: cover;
@@ -47,46 +45,28 @@ body {
     object-fit: cover;
 }
 
-/* =========================================== */
-/* === ANIMACIÓN PURA DE CSS === */
-/* =========================================== */
+/* --- Títulos del Hero --- */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-oro);
+    animation-name: aparecerDesdeAbajo;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+}
 
-/* PASO 1: Se define la secuencia de la animación. */
+/* Define la secuencia de la animación para el título */
 @keyframes aparecerDesdeAbajo {
-    /* Estado inicial (0%): El texto está abajo y es invisible. */
     from {
         opacity: 0;
-        transform: translateY(30px); /* Lo movemos 30px hacia abajo */
+        transform: translateY(30px);
     }
-
-    /* Estado final (100%): El texto está en su posición original y es visible. */
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-/* PASO 2: Se aplica la animación al texto. */
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--color-oro);
-
-    /* Le decimos que use la animación que acabamos de crear */
-    animation-name: aparecerDesdeAbajo;
-    
-    /* Duración de la animación */
-    animation-duration: 0.9s;
-    
-    /* La animación empieza suave y termina rápido */
-    animation-timing-function: ease-out;
-
-    /* LA PARTE MÁS IMPORTANTE:
-        Le dice al texto que MANTENGA los estilos del final de la animación.
-       Esto evita que desaparezca. */
-    animation-fill-mode: forwards;
-}
-
 
 .hero-subtitle {
     font-size: 0.9rem;
@@ -95,13 +75,12 @@ body {
     margin-top: 0.8rem; 
 }
 
-/* ===========================
-    SECCIÓN 2: GALLERY
-   =========================== */
+/* ======================================= */
+/* 2. GALLERY: Contenedor para la imagen panorámica.
+/* ======================================= */
 #gallery img {
     width: 100%;
     height: auto;
-    object-fit: cover; 
     filter: grayscale(100%);
     transition: filter 0.3s ease;
     display: block; 
@@ -111,25 +90,12 @@ body {
     filter: grayscale(0%);
 }
 
-/* ===========================
-    FRANJAS DORADAS
-   =========================== */
-.golden-stripe {
-    background-color: var(--color-oro);
-    height: 35px;
-    width: 100%;
-}
-
-/* ===========================
-    SECCIÓN 3: INFO
-   =========================== */
+/* ======================================= */
+/* 3. INFO: Sección de texto, redes y botones de acción.
+/* ======================================= */
 #info {
     background-color: #0a0a0a;
     padding: 40px 20px;
-}
-
-.focus {
-    font-weight: 600;
 }
 
 .info-text {
@@ -139,6 +105,11 @@ body {
     line-height: 1.7;
 }
 
+.focus {
+    font-weight: 600;
+}
+
+/* --- Iconos de Redes Sociales --- */
 .social-icons a {
     display: inline-block;
     margin: 0 15px;
@@ -154,28 +125,23 @@ body {
     height: 45px;
 }
 
-/* ================================================= */
-/* === ESTILOS UNIFICADOS DE BOTONES === */
-/* ================================================= */
-
-/* --- Estilo del botón de Servicios --- */
-.btn-custom {
-    border: 2px solid var(--color-oro);
-    color: var(--color-oro);
-    background-color: transparent;
+/* --- Botones principales (Servicios y Oferta) --- */
+.btn-custom, .btn-oferta {
+    display: block;
+    width: 100%;
+    max-width: 305px;
+    margin: 15px auto 0 auto; /* Margen superior y centrado horizontal */
     padding: 10px 25px;
     font-size: 1.1rem;
     font-weight: bold;
     border-radius: 8px;
+}
+
+.btn-custom {
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro);
+    background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-top: 15px;
-    
-    /* === REGLAS AÑADIDAS PARA UNIFICAR TAMAÑO === */
-    display: block;      /* Se comporta como un bloque */
-    width: 100%;         /* Ocupa el 100% del espacio disponible */
-    max-width: 305px;    /* Ancho máximo para consistencia */
-    margin-left: auto;   /* Centrado horizontal */
-    margin-right: auto;  /* Centrado horizontal */
 }
 
 .btn-custom:hover {
@@ -183,25 +149,12 @@ body {
     color: var(--color-fondo-oscuro);
 }
 
-/* --- Estilo del botón de Oferta (mismas reglas de tamaño) --- */
 .btn-oferta {
     background-color: var(--color-oro);
     color: #000;
-    font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 25px;
-    font-size: 1.1rem;
-    border-radius: 8px;
     border: none;
     transition: filter 0.3s ease;
-    margin-top: 15px;
-    
-    /* === REGLAS DE TAMAÑO CONSISTENTES === */
-    display: block;
-    width: 100%;
-    max-width: 305px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btn-oferta:hover {
@@ -209,35 +162,21 @@ body {
     filter: brightness(0.9);
 }
 
-/* ===========================
-    AJUSTES RESPONSIVE
-   =========================== */
-@media (max-width: 768px) {
-    #hero { padding: 30px 15px 20px 15px; } /* Ajuste fino para móviles */
-    .hero-title { font-size: 2rem; }
-    .logo { width: 150px; height: 150px; }
-}
-
-/* ================================================= 
-    ESTILOS PARA MODAL DE OFERTA
-    ================================================= */
-
-/* --- Estilos para el Modal --- */
-
-/* Contenedor principal del modal (fondo oscuro, sin bordes) */
+/* ======================================= */
+/* 4. MODAL DE OFERTA: Estilos para la ventana emergente.
+/* ======================================= */
 #ofertaModal .modal-content {
     background-color: var(--color-fondo-oscuro);
     border: none;
     border-radius: 0;
 }
 
-/* Cabecera dorada */
 #ofertaModal .modal-header {
     background-color: var(--color-oro);
     color: #000;
-    justify-content: center; /* Centra el título */
+    justify-content: center;
     padding: 1rem;
-    border-bottom: none; /* Quitamos la línea de separación */
+    border-bottom: none;
 }
 
 #ofertaModal .modal-title {
@@ -245,15 +184,13 @@ body {
     font-weight: bold;
 }
 
-/* Cuerpo negro con la información */
 #ofertaModal .modal-body {
     text-align: center;
     padding: 2rem;
 }
 
-/* Estilos para cada línea de texto dentro del modal */
+/* --- Contenido de texto del Modal --- */
 .modal-dias, .modal-servicio {
-    color: var(--color-texto-blanco);
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -261,14 +198,38 @@ body {
 }
 
 .modal-horario {
-    color: var(--color-texto-blanco);
     font-size: 1.20rem;
-    margin-bottom: 0.25rem; /* Espacio antes de "CORTES A:" */
+    margin-bottom: 0.25rem;
 }
 
 .modal-precio {
     color: var(--color-oro);
     font-size: 3rem;
-    font-weight: 900; /* Letra extra gruesa */
+    font-weight: 900;
     line-height: 1.2;
+}
+
+/* ======================================= */
+/* ELEMENTOS MISCELÁNEOS
+/* ======================================= */
+.golden-stripe {
+    background-color: var(--color-oro);
+    height: 35px;
+    width: 100%;
+}
+
+/* ======================================= */
+/* MEDIA QUERIES: Ajustes para pantallas pequeñas (móviles).
+/* ======================================= */
+@media (max-width: 768px) {
+    #hero {
+        padding: 30px 15px 20px 15px;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
 }

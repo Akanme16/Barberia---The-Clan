@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica y metadatos del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios - The Clan</title>
+
+    <!-- Librerías y Hojas de Estilo Externas -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos personalizada para esta página -->
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body class="services-page">
+
+    <!-- ======================================= -->
+    <!-- HEADER: Diseño de dos colores con logo superpuesto en el centro. -->
+    <!-- ======================================= -->
+    <header class="services-header">
+        <div class="header-top"></div>
+        <div class="header-bottom"></div>
+        
+        <div class="header-logo">
+            <img src="assets/logo/logo-theclan.png" alt="Logo The Clan">
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ======================================= -->
+        <!-- SERVICES: Títulos, horarios y lista de precios detallados. -->
+        <!-- ======================================= -->
+        <section id="services-list" class="text-center">
+            <div class="container">
+                <h1>Nuestros Servicios</h1>
+                <h2>BARBERÍA</h2>
+                <p class="horarios"><span class="focus">HORARIOS:</span> LUNES A SÁBADO <br> 10:00 AM A 20:00 PM</p>
+
+                <div class="lista-precios">
+                    
+                    <!-- Item de Servicio (se repite para cada uno) -->
+                    <div class="service-item">
+                        <div class="service-name">Corte de cabello</div>
+                        <div class="service-price">
+                            <span class="price-label">PRECIO (₲)</span>
+                            <span class="price-amount">60.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-name">Perfilado de barba</div>
+                        <div class="service-price">
+                            <span class="price-label">PRECIO (₲)</span>
+                            <span class="price-amount">50.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-name">Ceja</div>
+                        <div class="service-price">
+                            <span class="price-label">PRECIO (₲)</span>
+                            <span class="price-amount">15.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-name">Lavado de cabello</div>
+                        <div class="service-price">
+                            <span class="price-label">PRECIO (₲)</span>
+                            <span class="price-amount">10.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-name">Corte y barba</div>
+                        <div class="service-price">
+                            <span class="price-label">PRECIO (₲)</span>
+                            <span class="price-amount">100.000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-name">Diseño de cabello personalizado</div>
+                        <div class="service-price">
+                            <span class="price-label">PRECIO (₲)</span>
+                            <span class="price-amount">15.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================= -->
+        <!-- SLIDERS: Muestran imágenes de cortes con desplazamiento automático. -->
+        <!-- ======================================= -->
+        <section id="sliders" class="text-center">
+            <div class="container">
+                <h3 class="cuts-title">Cortes que marcan la diferencia</h3>
+
+                <!-- Contenedor del Slider de Cortes Clásicos -->
+                <div class="slider-wrapper">
+                    <div class="slider-label">CORTES CLÁSICOS</div>
+                    <div id="classicSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <!-- CORRECCIÓN: Solo el primer item debe tener la clase "active" -->
+                            <div class="carousel-item active">
+                                <img src="assets/img/TheClan_Clasico-01.jpg" class="d-block w-100" alt="Corte Clásico 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Clasico-02.jpg" class="d-block w-100" alt="Corte Clásico 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Clasico-03.jpg" class="d-block w-100" alt="Corte Clásico 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Clasico-04.jpg" class="d-block w-100" alt="Corte Clásico 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Clasico-05.jpg" class="d-block w-100" alt="Corte Clásico 5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor del Slider de Cortes Modernos -->
+                <div class="slider-wrapper">
+                    <div class="slider-label">CORTES MODERNOS</div>
+                    <div id="modernSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                        <div class="carousel-inner">
+                            <!-- CORRECCIÓN: Solo el primer item debe tener la clase "active" -->
+                            <div class="carousel-item active">
+                                <img src="assets/img/TheClan_Modernos-01.jpg" class="d-block w-100" alt="Corte Moderno 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Modernos-02.jpg" class="d-block w-100" alt="Corte Moderno 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Modernos-03.jpg" class="d-block w-100" alt="Corte Moderno 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Modernos-04.jpg" class="d-block w-100" alt="Corte Moderno 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/TheClan_Modernos-05.jpg" class="d-block w-100" alt="Corte Moderno 5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================= -->
+    <!-- FOOTER: Información de la dirección y contacto. -->
+    <!-- ======================================= -->
+    <footer class="services-footer text-center">
+        <div class="container">
+            <h3>Estamos en:</h3>
+            <p>MFV8+M93 Fernando de la Mora, Asunción, Paraguay 1823</p>
+        </div>
+    </footer>
+    
+    <!-- Barra decorativa dorada final -->
+    <div class="golden-stripe-bottom"></div>
+
+    <!-- Scripts de Bootstrap (necesarios para que los sliders funcionen correctamente) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
