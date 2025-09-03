@@ -33,6 +33,7 @@
         </div>
     </header>
 
+    <!-- Contenido principal de la página -->
     <main>
 
         <!-- ======================================= -->
@@ -109,8 +110,19 @@
                 <div class="slider-wrapper">
                     <div class="slider-label">CORTES CLÁSICOS</div>
                     <div id="classicSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        
+                        <!-- Indicadores del Slider (los puntos) -->
+                        <div class="carousel-indicators">
+                            <!-- CORRECCIÓN: El target ahora apunta a #classicSlider -->
+                            <button type="button" data-bs-target="#classicSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#classicSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#classicSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#classicSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#classicSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+
+                        <!-- Contenido del Slider (las imágenes) -->
                         <div class="carousel-inner">
-                            <!-- CORRECCIÓN: Solo el primer item debe tener la clase "active" -->
                             <div class="carousel-item active">
                                 <img src="assets/img/TheClan_Clasico-01.jpg" class="d-block w-100" alt="Corte Clásico 1">
                             </div>
@@ -134,8 +146,18 @@
                 <div class="slider-wrapper">
                     <div class="slider-label">CORTES MODERNOS</div>
                     <div id="modernSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                        
+                        <!-- Indicadores del Slider (los puntos) -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#modernSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#modernSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#modernSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#modernSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#modernSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+
+                        <!-- Contenido del Slider (las imágenes) -->
                         <div class="carousel-inner">
-                            <!-- CORRECCIÓN: Solo el primer item debe tener la clase "active" -->
                             <div class="carousel-item active">
                                 <img src="assets/img/TheClan_Modernos-01.jpg" class="d-block w-100" alt="Corte Moderno 1">
                             </div>

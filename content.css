@@ -158,7 +158,7 @@ body.services-page {
     font-weight: 700;
     display: block;
     max-width: 320px;
-    margin: 0 auto 1rem auto;
+    margin: 1rem auto 1rem auto;
     padding: 10px 30px 10px 55px;
     text-align: center;
 }
@@ -182,7 +182,27 @@ body.services-page {
 }
 
 /* ======================================= */
-/* 4. FOOTER: Estilos para la sección final de la página.
+/* 4. ESTILOS PARA INDICADORES DEL SLIDER
+/* Transforma los indicadores en puntos circulares.
+/* ======================================= */
+.carousel-indicators [data-bs-target] {
+    width: 10px;           /* Ancho del punto */
+    height: 10px;          /* Alto del punto */
+    border-radius: 50%;    /* Lo hace un círculo perfecto */
+    background-color: #fff; /* Color del punto */
+    opacity: 0.5;          /* Opacidad para los puntos inactivos */
+    border-top: none;      /* Quita bordes de Bootstrap */
+    border-bottom: none;   /* Quita bordes de Bootstrap */
+    margin: 0 5px;         /* Espacio entre los puntos */
+}
+
+/* Estilo para el punto de la imagen activa */
+.carousel-indicators .active {
+    opacity: 1; /* El punto activo es totalmente visible */
+}
+
+/* ======================================= */
+/* 5. FOOTER: Estilos para la sección final de la página.
 /* ======================================= */
 .services-footer {
     background-color: #0a0a0a;
