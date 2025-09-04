@@ -23,7 +23,7 @@ body {
     position: relative;
     min-height: auto; 
     padding: 40px 15px 25px 15px;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/background/img-cover-01.png');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/background/img-cover-01.webp');
     background-color: #000;
     background-size: cover;
     background-position: center top;
