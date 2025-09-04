@@ -210,7 +210,7 @@ body {
 }
 
 /* ======================================= */
-/* ELEMENTOS MISCELÁNEOS
+/* 5.ELEMENTOS MISCELÁNEOS
 /* ======================================= */
 .golden-stripe {
     background-color: var(--color-oro);
@@ -219,7 +219,7 @@ body {
 }
 
 /* ======================================= */
-/* MEDIA QUERIES: Ajustes para pantallas pequeñas (móviles).
+/* 6.MEDIA QUERIES: Ajustes para pantallas pequeñas (móviles).
 /* ======================================= */
 @media (max-width: 768px) {
     #hero {
@@ -232,4 +232,88 @@ body {
         width: 150px;
         height: 150px;
     }
+}
+
+/*  ======================================= 
+    7.ESTILOS PARA EL TRADUCTOR DE GOOGLE
+======================================= 
+
+/* --- 1. Ocultar la Interfaz de Google --- */
+
+/* Mueve el widget de anclaje de Google físicamente fuera de la pantalla */
+#google_translate_element {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Oculta el banner y la clase "skiptranslate" que añade Google */
+.goog-te-banner-frame, 
+.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+} 
+
+/* ANULA el desplazamiento que Google añade al body */
+body {
+    top: 0px !important; 
+}
+
+/* Quita el resaltado azul que Google aplica al texto seleccionado */
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+/* --- Estilo del botón personalizado --- */
+#language-dropdown {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 1050;
+}
+
+#language-dropdown .btn {
+    background-color: transparent;
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro);
+    font-weight: bold;
+    border-radius: 8px;
+    min-width: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#language-dropdown .btn::after {
+    display: none;
+}
+
+#language-dropdown .btn:hover, 
+#language-dropdown .btn:focus {
+    background-color: var(--color-oro);
+    color: var(--color-fondo-oscuro);
+    box-shadow: none;
+}
+
+/* --- Estilo del menú desplegable --- */
+#language-dropdown .dropdown-menu {
+    background-color: var(--color-fondo-oscuro);
+    border: 2px solid var(--color-oro);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+}
+
+#language-dropdown .dropdown-item {
+    color: var(--color-texto-blanco);
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#language-dropdown .dropdown-item:hover {
+    background-color: rgba(184, 159, 126, 0.2);
+    color: var(--color-texto-blanco);
 }

@@ -19,7 +19,17 @@
 <body>
 
     <main>
-        
+        <div id="language-dropdown" class="btn-group notranslate">
+            <button id="language-btn-text" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar idioma">
+                ES
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                <li><a class="dropdown-item" href="#" data-lang="pt">Português</a></li>
+            </ul>
+        </div>
+
         <!-- ======================================= -->
         <!-- HERO: Sección principal con el logo, título y eslogan de la marca. -->
         <!-- ======================================= -->
@@ -111,9 +121,15 @@
             </div>
         </div>
     </main>
+
+    <!-- Script de traducción -->
+    <script src="js/translate.js" defer></script>
     
+    <!-- ANCLAJE PARA EL SCRIPT DE GOOGLE TRANSLATE (ESENCIAL) -->
+    <div id="google_translate_element" style="display: none;"></div>
+
     <!-- Scripts de JavaScript (necesarios para funcionalidades de Bootstrap como el Modal) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
 </body>
 </html>

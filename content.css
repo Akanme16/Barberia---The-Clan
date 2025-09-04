@@ -254,3 +254,38 @@ body.services-page {
     background-color: var(--color-oro);
     height: 40px;
 }
+
+/*  ======================================= 
+    7.ESTILOS PARA EL TRADUCTOR DE GOOGLE
+======================================= 
+
+/* --- 1. Ocultar la Interfaz de Google --- */
+
+/* Mueve el widget de anclaje de Google físicamente fuera de la pantalla */
+#google_translate_element {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Oculta el banner y la clase "skiptranslate" que añade Google */
+.goog-te-banner-frame, 
+.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+} 
+
+/* ANULA el desplazamiento que Google añade al body */
+body {
+    top: 0px !important; 
+}
+
+/* Quita el resaltado azul que Google aplica al texto seleccionado */
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
