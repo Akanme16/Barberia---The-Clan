@@ -202,7 +202,43 @@ body.services-page {
 }
 
 /* ======================================= */
-/* 5. FOOTER: Estilos para la sección final de la página.
+/* 5. BOTÓN FLOTANTE DE REGRESO
+/* ======================================= */
+.floating-back-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+
+    /* --- Apariencia y Diseño --- */
+    width: 55px;
+    height: 55px;
+    background-color: var(--color-oro);
+    border-radius: 50%;
+    /* NUEVO: Borde blanco temático para que resalte */
+    border: 2px solid var(--color-texto-blanco); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: filter 0.3s ease;
+}
+
+.floating-back-btn i {
+    color: var(--color-fondo-oscuro);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.floating-back-btn:hover {
+    filter: brightness(0.9);
+}
+
+
+/* ======================================= */
+/* 6. FOOTER: Estilos para la sección final de la página.
 /* ======================================= */
 .services-footer {
     background-color: #0a0a0a;
