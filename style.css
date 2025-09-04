@@ -272,7 +272,7 @@ body {
 /* --- Estilo del botón personalizado --- */
 #language-dropdown {
     position: absolute;
-    top: 25px;
+    top: 35px;
     right: 25px;
     z-index: 1050;
 }
